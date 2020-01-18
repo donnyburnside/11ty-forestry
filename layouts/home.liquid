@@ -1,0 +1,52 @@
+---
+layout: layout.liquid
+---
+<div class="container">
+    <p><strong>Template Name:</strong> home.liquid</p>
+</div>
+
+<section>
+    <div class="container py-5">
+        <h1>{{ title }}</h1>
+        {{ content }}
+    </div>
+</section>
+
+<section>
+    <div class="container py-5">
+        <h2>Services</h2>
+        <div>
+            {% for service in collections.services %}
+                <h3><a href="{{ service.url }}">{{ service.data.title }}</a></h3>
+                <em>{{ service.date | date: "%Y-%m-%d" }}</em>
+            {% endfor %}
+        </div>
+        <a class="d-inline-block mt-4" href="{{ '/services/' | url }}">View Services</a>
+    </div>
+</section>
+
+<section>
+    <div class="container py-5">
+        <h2>Case Studies</h2>
+        <div>
+            {% for case-study in collections.case-studies %}
+                <h2><a href="{{ case-study.url }}">{{ case-study.data.title }}</a></h2>
+                <em>{{ case-study.date | date: "%Y-%m-%d" }}</em>
+            {% endfor %}
+        </div>
+        <a class="d-inline-block mt-4" href="{{ '/case-studies/' | url }}">View Case Studies</a>
+    </div>
+</section>
+
+<section>
+    <div class="container py-5">
+        <h2>Latest Blog Posts</h2>
+        <div>
+            {% for post in collections.blog %}
+                <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                <em>{{ post.date | date: "%Y-%m-%d" }}</em>
+            {% endfor %}
+        </div>
+        <a class="d-inline-block mt-4" href="{{ '/blog/' | url }}">View Blog</a>
+    </div>
+</section>

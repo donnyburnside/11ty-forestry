@@ -1,0 +1,27 @@
+Current URL: {{ page.url }}
+<hr />
+{%- if nav != blank -%}
+    {%- assign currentNavItemClass = 'is-current' -%}
+    {%- assign currentAncestorNavItemClass = 'is-current-ancestor' -%}
+
+    <ul role="menubar">
+        {%- for navItem in nav -%}
+            <li class="{% if navItem.url == page.url %}{{ currentNavItemClass }} {% elsif navItem.url != '/' and page.url contains navItem.url %}{{ currentAncestorNavItemClass }} {% endif %}" role="presentation">
+                <a href="{{ navItem.url | url }}" role="menuitem">
+                    {{- navItem.title -}}
+                </a>
+                {%- if navItem.children -%}
+                    <ul role="menu" aria-label="{{ navItem.title }}">
+                        {%- for childNavItem in navItem.children -%}
+                            <li class="{% if childNavItem.url == page.url %}{{ currentNavItemClass }}{% endif %}" role="presentation">
+                                <a href="{{ childNavItem.url | url }}" role="menuitem">
+                                    {{- childNavItem.title -}}
+                                </a>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                {%- endif -%}
+            </li>
+        {%- endfor -%}
+    </ul>
+{%- endif -%}

@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Home",
+        "slug": "home",
+        "url": "/"
+    },
+    {
+        "title": "What We Do",
+        "slug": "services",
+        "url": "/services/",
+        "children": [
+            {
+                "title": "Search Engine Optimisation (SEO)",
+                "slug": "services.seo",
+                "url": "/services/seo/"
+            },
+            {
+                "title": "Pay Per Click Marketing (PPC)",
+                "slug": "services.ppc",
+                "url": "/services/ppc/"
+            },
+            {
+                "title": "Social Media Optimisation (SMO)",
+                "slug": "services.smo",
+                "url": "/services/smo/"
+            },
+            {
+                "title": "Ecommerce Solutions",
+                "slug": "services.ecommerce",
+                "url": "/services/e-commerce/"
+            },
+            {
+                "title": "Web Design & Development",
+                "slug": "services.web-design-development",
+                "url": "/services/web-design-development/"
+            }
+        ]
+    },
+    {
+        "title": "Case Studies",
+        "slug": "case-studies",
+        "url": "/case-studies/"
+    },
+    {
+        "title": "Blog",
+        "slug": "blog",
+        "url": "/blog/"
+    },
+    {
+        "title": "About Us",
+        "slug": "about",
+        "url": "/about/"
+    },
+    {
+        "title": "Contact us",
+        "slug": "contact",
+        "url": "/contact/"
+    }
+]

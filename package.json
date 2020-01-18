@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "An example project that uses 11ty with Forestry.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
   },
   "repository": {
     "type": "git",

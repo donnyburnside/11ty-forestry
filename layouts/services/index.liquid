@@ -1,0 +1,14 @@
+---
+layout: layout.liquid
+---
+<div class="container">
+    <p><strong>Template Name:</strong> services/index.liquid</p>
+    
+    <h1>{{ title }}</h1>
+    {{ content }}
+    
+    {% for service in collections.services %}
+        <h2><a href="{{ service.url }}">{{ service.data.title }}</a></h2>
+        <em>{{ service.date | date: "%Y-%m-%d" }}</em>
+    {% endfor %}
+</div>

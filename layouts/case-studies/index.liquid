@@ -1,0 +1,14 @@
+---
+layout: layout.liquid
+---
+<div class="container">
+    <p><strong>Template Name:</strong> case-studies/index.liquid</p>
+    
+    <h1>{{ title }}</h1>
+    {{ content }}
+    
+    {% for case-study in collections.case-studies %}
+        <h2><a href="{{ case-study.url }}">{{ case-study.data.title }}</a></h2>
+        <em>{{ case-study.date | date: "%Y-%m-%d" }}</em>
+    {% endfor %}
+</div>

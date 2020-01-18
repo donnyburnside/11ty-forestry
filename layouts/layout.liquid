@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ site.title }}</title>
+        <link rel="stylesheet" href="/assets/css/app.css">
+    </head>
+    <body>
+        <div class="site-container">
+            <header class="site-header" role="banner">
+                <div class="container py-4">
+                    <a class="site-header__brand" href="/" rel="home">
+                        {{ site.title }}
+                    </a>
+                    <nav class="site-header__nav mt-3" role="navigation">
+                        {% include nav %}
+                    </nav>
+                </div>
+            </header>
+            <main class="site-main" role="main">
+                {{ content }}
+            </main>
+            <footer class="site-footer" role="contentinfo">
+                <div class="container py-3">
+                    <p class="mb-0">Copyright &copy; {{ site.title }}</p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+    </body>
+</html>
