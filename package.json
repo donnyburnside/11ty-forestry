@@ -1,0 +1,18 @@
+{
+  "name": "11ty-forestry",
+  "version": "1.0.0",
+  "description": "An example project that uses 11ty with Forestry.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donnyburnside/11ty-forestry.git"
+  },
+  "author": {
+    "name": "Donny Burnside",
+    "email": "donnyburnside1@gmail.com",
+    "url": "http://www.donnyburnside.com/"
+  },
+  "license": "UNLICENSED"
+}
