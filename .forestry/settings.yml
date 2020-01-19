@@ -9,15 +9,12 @@ sections:
 - type: document
   path: content/index.md
   label: Home
-  match: "**/*"
 - type: document
   path: content/about.md
   label: About
-  match: "**/*"
 - type: document
-  path: content/contact
+  path: content/contact.md
   label: Contact
-  match: "**/*"
 - type: heading
   label: Collections
 - type: directory
