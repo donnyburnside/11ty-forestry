@@ -2,7 +2,7 @@ module.exports = function(eleventyConfig) {
     // Output directory: _site
   
     // Copy the `media/` directory
-    eleventyConfig.addPassthroughCopy('media/**/!(.gitkeep)');
+    eleventyConfig.addPassthroughCopy('uploads/**/!(.gitkeep)');
 
     return {
         // Directories
