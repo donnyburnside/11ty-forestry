@@ -1,0 +1,18 @@
+// Functions, Settings and Mixins
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import './settings';
+
+// Base
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import './layout';
+
+// Utilities
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/screenreaders';
+@import '~bootstrap/scss/utilities/sizing';
+@import '~bootstrap/scss/utilities/spacing';
+@import '~bootstrap/scss/utilities/text';

@@ -4,11 +4,33 @@
   "description": "An example project that uses 11ty with Forestry.",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "prebuild": "npm run clean && cross-env NODE_ENV=production webpack --hide-modules --no-progress",
+    "start": "concurrently --kill-others \"eleventy --serve\" \"cross-env NODE_ENV=development webpack --hide-modules --no-progress --watch\"",
+    "prestart": "cross-env NODE_ENV=development webpack --hide-modules --no-progress",
+    "forestry:preview": "eleventy --serve",
+    "clean": "rimraf ./dist"
   },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.4.1",
+    "concurrently": "^5.0.2",
+    "core-js": "^3.6.4",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "regenerator-runtime": "^0.13.3",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/donnyburnside/11ty-forestry.git"
